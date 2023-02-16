@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{pagina}}{% endblock title %}
+
+{% block content %}
+    {% include 'navbar.html' %}
+
+    <div class="container">
+        <h1 class="text-center my-3">Amarals House</h1>
+        <h3 class="text-center my-3">Sistema de Hospedagem Amaral's House</h3>
+
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h2 class="d-flex justify-content-center align-content-center">{{n_acomodacao}}</h1>
+                      <p class="text-center">ACOMODAÇÕES</p>
+
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h2 class="d-flex justify-content-center align-content-center">{{n_hospede}}</h1>
+                      <p class="text-center">HÓSPEDES</p>
+
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h2 class="d-flex justify-content-center align-content-center">{{n_plataforma}}</h1>
+                      <p class="text-center">PLATAFORMAS</p>
+
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}

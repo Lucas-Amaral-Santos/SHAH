@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}{{pagina}}{% endblock title %}
+{% block content %}
+{% include 'navbar.html' %}
+    <div class='container'>
+        <h1 class="text-center my-3">{{pagina}}</h1>
+        
+        <table class="table table-striped">
+            <thead>
+                <th>Nome</th>
+                <th>Localização</th>
+                <th>Proprietario</th>                
+            <thead>
+            <tbody>
+                {% for a in acomodacoes %}
+                <td>{{a.nome}}</td>
+                <td>{{a.bairro}} - {{a.cidade}} - {{a.estado}} - {{a.pais}}</td>
+                <td>{{a.proprietario}}</td>
+                {% endfor %}
+            </tbody>        
+        </table>
+
+</div>
+
+
+{% endblock content %}
