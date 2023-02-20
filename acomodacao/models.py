@@ -2,14 +2,6 @@ from django.db import models
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
 
-class Servico(models.Model):
-    nome = models.CharField(max_length=200)
-    tx_servico = models.FloatField()
-    descricao = models.TextField(null=True, blank=True)  
-
-    def __str__(self):
-        return self.nome
-
 
 class Proprietario(models.Model):
     nome = models.CharField(max_length=200)
@@ -62,4 +54,13 @@ class Acomodacao(models.Model):
 
     def __str__(self):
         return self.nome
-    
+
+class Servico(models.Model):
+    nome = models.CharField(max_length=200)
+    tx_servico = models.FloatField()
+    descricao = models.TextField(null=True, blank=True)
+
+    acomodacao = models.ForeignKey(Acomodacao, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.nome

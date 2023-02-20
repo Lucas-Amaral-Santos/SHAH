@@ -18,5 +18,16 @@
 
 </div>
 
+<script>
+    $("#id_comissao_vigente").prop("checked", true);
+    $("#div_id_dt_fim").hide(300);
 
+    $("#id_comissao_vigente").click(function() {
+        if($(this).is(":checked")) {
+            $("#div_id_dt_fim").hide(300);
+        } else {
+            $("#div_id_dt_fim").show(200);
+        }
+    });
+</script>
 {% endblock content %}

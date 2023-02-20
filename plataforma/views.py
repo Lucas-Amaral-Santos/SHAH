@@ -9,7 +9,9 @@ def cadastra_plataforma(request):
     if request.method == 'POST':
         plataforma_form = PlataformaForm(request.POST)
         if plataforma_form.is_valid():
-            plataforma_form.save()
+            nova_plataforma = plataforma_form.save(commit=False)
+            nova_plataforma.cadastrado_por = request.user
+            nova_plataforma.save()
 
     return render(request, 'cadastra.html', {'form': plataforma_form, 'pagina': 'Cadastro de Plataforma'})
 
