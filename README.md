@@ -36,7 +36,7 @@ cd shah
 pip install -r requirements.txt
 ```
 
-7. Após a inistalação dos pacotes execute o projeto
+7. Após a instalação dos pacotes execute o projeto
 ```
 python manage.py runserver
 ```
