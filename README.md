@@ -40,3 +40,14 @@ pip install -r requirements.txt
 ```
 python manage.py runserver
 ```
+
+
+---
+
+Acessos para autenticação:
+
+**Login**
+supervisor
+
+**Senha**
+tempo
