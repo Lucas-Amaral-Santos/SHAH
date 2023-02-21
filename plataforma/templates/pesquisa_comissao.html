@@ -6,20 +6,22 @@
 {% block title %}{{pagina}}{% endblock title %}
 {% block content %}
 {% include 'navbar.html' with active=pagina %}
-<div class='container'>
+    <div class='container'>
         <h1 class="text-center my-3">{{pagina}}</h1>
         
         <table class="table table-striped">
             <thead>
-                <th>Nome</th>
-                <th>Localização</th>
-                <th>Proprietario</th>                
+                <th>Plataforma</th>
+                <th>Data de Início</th>                
+                <th>Data de Fim</th>
+                <th>Plataforma</th>
             <thead>
             <tbody>
-                {% for a in acomodacoes %}
-                <td>{{a.nome}}</td>
-                <td>{{a.bairro}} - {{a.cidade}} - {{a.estado}} - {{a.pais}}</td>
-                <td>{{a.proprietario}}</td>
+                {% for c in comissoes %}
+                <td>{{c}}</td>
+                <td>{{c.dt_inicio}}</td>                
+                <td>{{c.dt_fim}}</td>
+                <td>{{c.plataforma}}</td>
                 {% endfor %}
             </tbody>        
         </table>

@@ -16,7 +16,7 @@ def pesquisa_proprietario(request):
     except:
         proprietarios = None
 
-    return render(request, 'pesquisa_proprietario.html', {'proprietarios': proprietarios, 'pagina': 'Pesquisar Proprietarios'})
+    return render(request, 'pesquisa_proprietario.html', {'proprietarios': proprietarios, 'pagina': 'Pesquisar Proprietários'})
 
 
 
